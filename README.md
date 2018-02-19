@@ -16,6 +16,7 @@ See the [Notes for Week 7](notes-week7.pdf) in this repository.
 
 * Screencast of an example final project
 * Screencast of midterm answers
+* Screencast of how to deploy to a live URL using Heroku.com
 
 ### Getting Started
 
