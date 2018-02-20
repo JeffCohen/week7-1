@@ -15,7 +15,7 @@ class DirectorsController < ApplicationController
 
   def create
     Director.create :name => params["name"]
-    redirect_to "/directors"
+    redirect_to "/directors", notice: "Director added"
   end
 
 end

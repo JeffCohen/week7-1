@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
+    @movies = Movie.all.limit(100).order('created_at desc')
   end
 
   def update

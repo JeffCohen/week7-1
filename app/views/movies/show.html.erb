@@ -20,7 +20,9 @@
         <h3>Cast:</h3>
         <hr>
         <div class="row">
-          <% Character.where(movie_id: movie.id).each do |character| %>
+          <% movie.characters.each do |character| %>
+          <%# movie.actors.each do |actor| %>
+
             <div class="col-sm-3 text-center">
               <%= image_tag(character.actor.photo_url, class: 'img-fluid mb-3') %>
               <br>
