@@ -11,8 +11,10 @@
       <%= link_to image_tag(poster_url, :class => "img-fluid"), "/movies/#{movie.id}" %>
 
       <p>
-        <%= link_to "[Delete]", "/movies/#{movie.id}", method: "delete" %>
-        <%= link_to "[Edit]", "/movies/#{movie.id}/edit" %>
+        <% if session[:user_id].present? %>
+          <%= link_to "[Delete]", "/movies/#{movie.id}", method: "delete" %>
+          <%= link_to "[Edit]", "/movies/#{movie.id}/edit" %>
+        <% end %>
       </p>
     </div>
 

@@ -13,8 +13,8 @@ Director
 
 User
   email: text
-  password: text
-
+  password_digest: text
+  
 Actor
   name: text
   photo_url: text

@@ -36,7 +36,7 @@
         </form>
         <ul class="navbar-nav ml-auto">
           <% if session[:user_id] != nil %>
-            <li class="nav-item">Hi, <%= User.find_by(id: session[:user_id]).email %></li>
+            <li class="nav-item"><%= link_to "My Account", "/users/#{session[:user_id]}" %></li>
             <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
           <% else %>
             <li class="nav-item"><a class="nav-link" href="/users/new">Sign Up</a></li>

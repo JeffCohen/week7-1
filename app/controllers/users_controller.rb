@@ -1,10 +1,16 @@
 class UsersController < ApplicationController
 
+  def show
+    if params["id"] != session[:user_id].to_s
+      redirect_to "/", notice: "Nice try!"
+    end
+  end
+
   def index
     @users = User.all.order('email')
   end
 
-  def new
+  def new # /users/new
     @user = User.new
   end
 
@@ -22,7 +28,7 @@ class UsersController < ApplicationController
     redirect_to "/users"
   end
 
-  def create
+  def create # POST /users
     # @user = User.create :email => params["email"], :password => params["password"]
     @user = User.new
     @user.email = params["email"]
