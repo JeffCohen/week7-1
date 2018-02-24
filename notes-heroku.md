@@ -48,8 +48,6 @@ group :production do
 end
 ```
 
-The Gemfile we use in class has already been updated for you.
-
 **Step 2: Bundle without Production gems**
 
 You do not need to install the actual production gems on your machine, and the pg gem in particular can be
@@ -77,16 +75,16 @@ git commit -m "My commit message goes here"
 
 `git push heroku master`
 
-If you are familiar with Git branches, you can replace "master" with "[branchname]:master" to push your local
+Optional: if you are familiar with Git branches, you can replace "master" with "[branchname]:master" to push your local
 branch to Heroku's master branch.
 
 **Step 6: Run your Rails tasks**
 
-Heroku only supports the old-style `rake` syntax:
+Prefix any typical rails task with `heroku run` to execute the task on your remote Heroku instance:
 
 ```
-heroku run rake db:migrate
-heroku run rake db:seed
+heroku run rails db:migrate
+heroku run rails db:seed
 ```
 
 **Step 7: Navigate to Your App**
